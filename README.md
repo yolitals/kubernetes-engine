@@ -13,7 +13,6 @@
 - ```$ terraform apply ```
 
 ## Config local tools
-- Install kubctl
 - Install Helm
 - Configure kubectl to connect our kubernetes clustes.
 ```sh
