@@ -8,18 +8,23 @@
 - Install kubectl 
 
 ## Build kubernetes cluster
-```$ cd infrastructure```
-```$ terraform apply ```
+
+- ```$ cd infrastructure```
+- ```$ terraform apply ```
 
 ## Config local tools
 - Install kubctl
 - Install Helm
 - Configure kubectl to connect our kubernetes clustes.
-```$ gcloud container clusters get-credentials devfest --zone us-west1-a --project kubernetes-229703 ```
-```# devfest is a cluster name created previously ```
-```# kubernetes-229703 is the gcp project ussing to create cluster in gcp ```
+```sh
+$ gcloud container clusters get-credentials devfest --zone us-west1-a --project kubernetes-229703 
+# devfest is a cluster name created previously 
+# kubernetes-229703 is the gcp project ussing to create cluster in gcp 
+```
 - Test cluster conexion 
-```$ kubectl cluster-info```
+```
+$ kubectl cluster-info
+```
 - Install Helm
 - Initialize helm
 ```$ helm init```
