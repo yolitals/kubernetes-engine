@@ -27,19 +27,25 @@ $ kubectl cluster-info
 ```
 - Install Helm
 - Initialize helm
-```$ helm init```
+```
+$ helm init
+```
 ## Deployments
  - Hack
-``` kubectl create serviceaccount --namespace kube-system tiller
-kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
-kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'```
+```sh
+$ kubectl create serviceaccount --namespace kube-system tiller
+
+$ kubectl create clusterrolebinding tiller-cluster-rule --clusterrole=cluster-admin --serviceaccount=kube-system:tiller
+
+$ kubectl patch deploy --namespace kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"serviceAccount":"tiller"}}}}'
+```
 
 - Helm Deploy
-```
+```sh
 $ cd app
 $ helm package helloworld --debug
 $ helm install helloworld-0.1.0.tgz --name helloworld
-``
+```
 
 
 
